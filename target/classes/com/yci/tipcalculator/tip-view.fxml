@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="400.0" prefWidth="400.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yci.tipcalculator.TipController">
+   <padding>
+      <Insets bottom="40.0" left="32.0" right="32.0" top="40.0" />
+   </padding>
+   <children>
+      <VBox spacing="8.0">
+         <children>
+            <Label text="Total amount">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfTotalAmount" />
+         </children>
+      </VBox>
+      <VBox spacing="8.0">
+         <children>
+            <Label text="Tip percentage">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Slider fx:id="sliderPercentage" max="50.0" min="10.0" showTickLabels="true" showTickMarks="true" value="10.0" />
+         </children>
+      </VBox>
+      <VBox spacing="8.0">
+         <children>
+            <Label text="No of people">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField />
+         </children>
+      </VBox>
+      <Button mnemonicParsing="false" onAction="#calculateTip" prefHeight="32.0" prefWidth="360.0" style="-fx-background-color: #6562F4;" text="Calculate" textFill="WHITE" />
+      <VBox prefHeight="0.0" prefWidth="360.0" spacing="10.0">
+         <children>
+            <VBox spacing="2.0">
+               <children>
+                  <Label text="Total" textFill="#8d8c8c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotal" text="\$ 100">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox spacing="2.0">
+               <children>
+                  <Label text="Tip" textFill="#8d8c8c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotalTip" text="\$ 15">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox spacing="2.0">
+               <children>
+                  <Label text="Per person" textFill="#8d8c8c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTipPerPerson" text="\$ 5">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
